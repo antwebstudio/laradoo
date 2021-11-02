@@ -16,9 +16,7 @@ function laradooConfig()
 {
     if (function_exists('config_path')) {
         if (file_exists(config_path('laradoo.php'))) {
-            $configuration = include(config_path('laradoo.php'));
-
-            return $configuration;
+            return config('laradoo');
         }
     }
 
